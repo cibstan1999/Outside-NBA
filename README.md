@@ -4,10 +4,11 @@ A static NBA map website built with plain HTML, CSS, JavaScript, Leaflet.js, and
 
 ## Features
 
-- Shows all 30 NBA home arenas across the United States and Canada
+- Shows all 30 NBA home arenas
 - Click a marker to view team and arena details
+- Search by team, arena, or city
 - Click one arena to set point A, then another arena to set point B
-- Calculates distance with the Haversine formula
+- Calculates straight-line great-circle distance with the Haversine formula
 - Displays both kilometers and miles
 - Draws a line between selected arenas
 - Reset button clears the selection
@@ -17,6 +18,7 @@ A static NBA map website built with plain HTML, CSS, JavaScript, Leaflet.js, and
 
 ```text
 .
+├── .nojekyll
 ├── index.html
 ├── styles.css
 ├── script.js
