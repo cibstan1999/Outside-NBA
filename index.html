@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NBA Arena Distance Map</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="topbar" aria-label="NBA arena map controls">
+        <div>
+          <p class="eyebrow">NBA Arena Distance Map</p>
+          <h1>Pick two NBA arenas</h1>
+        </div>
+
+        <form class="search-form" id="searchForm" role="search">
+          <input
+            id="searchInput"
+            class="search-input"
+            type="search"
+            placeholder="Search team or arena"
+            autocomplete="off"
+            aria-label="Search team or arena"
+          />
+          <button class="search-button" type="submit">Search</button>
+        </form>
+
+        <button id="resetButton" class="reset-button" type="button">Reset</button>
+      </section>
+
+      <section class="status-panel" aria-live="polite">
+        <div class="selection-card">
+          <span class="selection-logo">
+            <img id="pointALogo" alt="" hidden />
+            <span id="pointAFallback">Select the 1st Team</span>
+          </span>
+          <div>
+            <p class="selection-title" id="pointAName"></p>
+            <p class="selection-meta" id="pointAArena"></p>
+          </div>
+        </div>
+
+        <div class="selection-card">
+          <span class="selection-logo selection-logo-b">
+            <img id="pointBLogo" alt="" hidden />
+            <span id="pointBFallback">Select the 2nd Team</span>
+          </span>
+          <div>
+            <p class="selection-title" id="pointBName"></p>
+            <p class="selection-meta" id="pointBArena"></p>
+          </div>
+        </div>
+
+        <div class="distance-card">
+          <p class="distance-label">Distance</p>
+          <p class="distance-value" id="distanceValue">--</p>
+        </div>
+      </section>
+
+      <section class="map-wrap">
+        <div id="map" aria-label="Map of NBA arenas"></div>
+      </section>
+    </main>
+
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      crossorigin=""
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
